@@ -1,0 +1,2 @@
+
+Globals included with Luau.

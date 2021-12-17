@@ -26,3 +26,5 @@ Then you can run `npx dendron publish dev` to ensure the site is working, and fi
 npx dendron publish export --target github
 ```
 to build.
+
+If github pages is configured, all you have to do is push the repository!

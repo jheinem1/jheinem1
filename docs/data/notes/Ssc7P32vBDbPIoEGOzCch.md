@@ -1,0 +1,1 @@
+The current interpreter version. In Luau, this should return 'luau'.

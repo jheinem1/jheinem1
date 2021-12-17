@@ -2,7 +2,7 @@
 id: QwM4qXqsfcwsMvGC42A10
 title: Publish
 desc: ''
-updated: 1639703723324
+updated: 1639704404912
 created: 1639703041566
 ---
 
@@ -33,3 +33,5 @@ Then you can run `npx dendron publish dev` to ensure the site is working, and fi
 npx dendron publish export --target github
 ```
 to build.
+
+If github pages is configured, all you have to do is push the repository!

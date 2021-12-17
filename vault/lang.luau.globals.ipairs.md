@@ -2,7 +2,7 @@
 id: 54LAOY2t6K6kfjDtoHUQo
 title: ipairs
 desc: 'Iterates over arrays.'
-updated: 1639706529144
+updated: 1639707566330
 created: 1639706381423
 ---
 ```Lua
@@ -13,6 +13,6 @@ Returns three values: an iterator function, the table t and the number 0. Each t
 ```Lua
 local fruits = {"apples", "orangs", "kiwi"}
 for index, fruit in ipairs(fruits) do
-    print(index, fruit) --> 1 applies, 2 oranges, 3 kiwi, etc...
+    print(index, fruit) --> 1 apples, 2 oranges, 3 kiwi
 end
 ```

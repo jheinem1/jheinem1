@@ -1,8 +1,8 @@
 ---
 id: HUNAhx54cdmIl25040IiG
-title: Loadstring
+title: loadstring
 desc: 'Compiles and converts Luau code into a function.'
-updated: 1639706796274
+updated: 1640115837809
 created: 1639706608985
 ---
 ```Lua

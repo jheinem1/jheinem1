@@ -2,11 +2,11 @@
 id: Rwfw461a1jbNa3fP8vXgA
 title: getmetatable
 desc: 'Returns the metatable of the given object if possible.'
-updated: 1639706466119
+updated: 1640112382114
 created: 1639706181295
 ---
 ```Lua
-getmetatable(t: table | string | userdata): table | nil
+getmetatable<T: table | string | userdata>(t: T): T?
 ```
 Returns the [[lang.luau.metatable]] of the given table t if it has one, otherwise returns nil. If t does have a [[lang.luau.metatable]], and the [[lang.luau.metatable.__metatable]] metamethod is set, it returns that value instead.
 ## Examples

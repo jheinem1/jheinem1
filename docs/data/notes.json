@@ -11,8 +11,8 @@
       "links": [],
       "anchors": {},
       "fname": "403",
-      "updated": 1639707253068,
-      "created": 1639707253068,
+      "updated": 1640115741875,
+      "created": 1640115741875,
       "parent": null,
       "children": [],
       "data": {}
@@ -2829,12 +2829,12 @@
             "start": {
               "line": 4,
               "column": 13,
-              "offset": 79
+              "offset": 76
             },
             "end": {
               "line": 4,
               "column": 36,
-              "offset": 102
+              "offset": 99
             },
             "indent": []
           },
@@ -2850,12 +2850,12 @@
             "start": {
               "line": 4,
               "column": 113,
-              "offset": 179
+              "offset": 176
             },
             "end": {
               "line": 4,
               "column": 136,
-              "offset": 202
+              "offset": 199
             },
             "indent": []
           },
@@ -3121,12 +3121,12 @@
             "start": {
               "line": 4,
               "column": 146,
-              "offset": 212
+              "offset": 209
             },
             "end": {
               "line": 4,
               "column": 181,
-              "offset": 247
+              "offset": 244
             },
             "indent": []
           },
@@ -3636,13 +3636,368 @@
         "54LAOY2t6K6kfjDtoHUQo",
         "HUNAhx54cdmIl25040IiG",
         "aSrjKXhXTPBHPJrURHbGy",
-        "s8xulmSkomuwYY59g1g2e"
+        "s8xulmSkomuwYY59g1g2e",
+        "ArHImH45bIYP655dxbQRu",
+        "KQITPOsV6K0sg154kw8B7",
+        "2yvJG3dN726Z9LYpXeaSq",
+        "x6nS9N4ZMybTav28AQnj3",
+        "Pnts1qxX2kpKgf0RLBqBG",
+        "FRTyFQ5iHxeh3RGTfAjti",
+        "0pSuTMZXzr4wW2nudHCeD",
+        "BWRrs91i3XkBx7T3ht2Wu",
+        "ftc6xJ1syD0ldAkawEQIM",
+        "cnjNqzm5vq5z6QexAxjLC",
+        "UJbkI3uFmVsctY0mOBIIl",
+        "BM6Gs81dzpPgzVy2LQui5",
+        "qiOHnjjdPDb06FFAoTXcl"
       ],
       "data": {},
       "contentHash": "2d48e3fdf41d19db97f6d5c0048965ce",
       "custom": {
         "stub": false
       }
+    },
+    "qiOHnjjdPDb06FFAoTXcl": {
+      "id": "qiOHnjjdPDb06FFAoTXcl",
+      "title": "xpcall",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.xpcall",
+      "updated": 1640115493327,
+      "created": 1640115404905,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "662aa016b6f6ab8089209709e5bc7d00",
+      "custom": {}
+    },
+    "BM6Gs81dzpPgzVy2LQui5": {
+      "id": "BM6Gs81dzpPgzVy2LQui5",
+      "title": "unpack",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Returns a tuple of elements from an array.",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.unpack",
+      "updated": 1640115368186,
+      "created": 1640112734532,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "fada6cbd48926c32e2ecddfe1b207c42",
+      "custom": {}
+    },
+    "UJbkI3uFmVsctY0mOBIIl": {
+      "id": "UJbkI3uFmVsctY0mOBIIl",
+      "title": "Type",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.type",
+      "updated": 1640112711159,
+      "created": 1640112619319,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "ad75e1e73d9f72fbf38d6db9eed534a0",
+      "custom": {}
+    },
+    "cnjNqzm5vq5z6QexAxjLC": {
+      "id": "cnjNqzm5vq5z6QexAxjLC",
+      "title": "tostring",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Converts the given value to a string regardless of type.",
+      "links": [],
+      "anchors": {
+        "examples": {
+          "type": "header",
+          "text": "Examples",
+          "value": "examples",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "lang.luau.globals.tostring",
+      "updated": 1640112610490,
+      "created": 1640112566650,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "ec974d0a1152984ac274bf3c5f4e2e4d",
+      "custom": {}
+    },
+    "ftc6xJ1syD0ldAkawEQIM": {
+      "id": "ftc6xJ1syD0ldAkawEQIM",
+      "title": "tonumber",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Attempts to convert the given value to a number.",
+      "links": [],
+      "anchors": {
+        "examples": {
+          "type": "header",
+          "text": "Examples",
+          "value": "examples",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "lang.luau.globals.tonumber",
+      "updated": 1640112548924,
+      "created": 1640112487420,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "194760b3cf088171e539d8b7526a725b",
+      "custom": {}
+    },
+    "BWRrs91i3XkBx7T3ht2Wu": {
+      "id": "BWRrs91i3XkBx7T3ht2Wu",
+      "title": "setmetatable",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Sets the metatable for the given value if possible.",
+      "links": [
+        {
+          "from": {
+            "fname": "lang.luau.metatable",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 521
+            },
+            "end": {
+              "line": 10,
+              "column": 35,
+              "offset": 555
+            },
+            "indent": []
+          },
+          "value": "lang.luau.globals.setmetatable"
+        },
+        {
+          "from": {
+            "fname": "lang.luau.globals.newproxy",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 203,
+              "offset": 253
+            },
+            "end": {
+              "line": 5,
+              "column": 237,
+              "offset": 287
+            },
+            "indent": []
+          },
+          "value": "lang.luau.globals.setmetatable"
+        }
+      ],
+      "anchors": {
+        "examples": {
+          "type": "header",
+          "text": "Examples",
+          "value": "examples",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "fname": "lang.luau.globals.setmetatable",
+      "updated": 1640112425321,
+      "created": 1640112248108,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "0d832d7610cf01c217d40c177fdab649",
+      "custom": {}
+    },
+    "0pSuTMZXzr4wW2nudHCeD": {
+      "id": "0pSuTMZXzr4wW2nudHCeD",
+      "title": "setfenv",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Sets the environment of the given environment.",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.setfenv",
+      "updated": 1640112214976,
+      "created": 1640112103490,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "d3c52a240012099c43501f638ab143d8",
+      "custom": {}
+    },
+    "FRTyFQ5iHxeh3RGTfAjti": {
+      "id": "FRTyFQ5iHxeh3RGTfAjti",
+      "title": "Select",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Returns all arguments after ",
+      "links": [],
+      "anchors": {
+        "examples": {
+          "type": "header",
+          "text": "Examples",
+          "value": "examples",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "cmd-string-argument": {
+          "type": "header",
+          "text": "CMD String Argument",
+          "value": "cmd-string-argument",
+          "line": 14,
+          "column": 0,
+          "depth": 3
+        },
+        "number-argument": {
+          "type": "header",
+          "text": "Number Argument",
+          "value": "number-argument",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "fname": "lang.luau.globals.select",
+      "updated": 1640112049586,
+      "created": 1640111652536,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "a20954fcb0f61ffb28c5ee6a8a3c060b",
+      "custom": {}
+    },
+    "Pnts1qxX2kpKgf0RLBqBG": {
+      "id": "Pnts1qxX2kpKgf0RLBqBG",
+      "title": "rawset",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Sets a value of a table without invoking metamethods",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.rawset",
+      "updated": 1640111631825,
+      "created": 1640111556561,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "24139d6650c64e65d5e85239dd43e679",
+      "custom": {}
+    },
+    "x6nS9N4ZMybTav28AQnj3": {
+      "id": "x6nS9N4ZMybTav28AQnj3",
+      "title": "rawget",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Gets a value from a table without invoking metamethods.",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.rawget",
+      "updated": 1640111530363,
+      "created": 1640111488791,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "715106b49362632e6092a121310b07da",
+      "custom": {}
+    },
+    "2yvJG3dN726Z9LYpXeaSq": {
+      "id": "2yvJG3dN726Z9LYpXeaSq",
+      "title": "rawequal",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Compares two values without invoking metamethods.",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.rawequal",
+      "updated": 1640111478197,
+      "created": 1640111436411,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "83ab9f20beb131e54990cced0aabaf45",
+      "custom": {}
+    },
+    "KQITPOsV6K0sg154kw8B7": {
+      "id": "KQITPOsV6K0sg154kw8B7",
+      "title": "Print",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Prints any number of values to the console, formatting non-string values.",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.print",
+      "updated": 1640111420970,
+      "created": 1640111355176,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "aead2e4fccc88512e13414537424fac6",
+      "custom": {}
+    },
+    "ArHImH45bIYP655dxbQRu": {
+      "id": "ArHImH45bIYP655dxbQRu",
+      "title": "pcall",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "type": "note",
+      "desc": "Luau alternative to the standard try-catch.",
+      "links": [],
+      "anchors": {},
+      "fname": "lang.luau.globals.pcall",
+      "updated": 1640115439752,
+      "created": 1640111240137,
+      "parent": "DGU9GgAaWP4b1d29cAw6U",
+      "children": [],
+      "data": {},
+      "contentHash": "b66995e4b2b0b01102f40596675806b1",
+      "custom": {}
     },
     "s8xulmSkomuwYY59g1g2e": {
       "id": "s8xulmSkomuwYY59g1g2e",
@@ -3810,22 +4165,22 @@
         }
       ],
       "anchors": {
-        "example": {
+        "examples": {
           "type": "header",
-          "text": "Example",
-          "value": "example",
+          "text": "Examples",
+          "value": "examples",
           "line": 13,
           "column": 0,
           "depth": 2
         }
       },
       "fname": "lang.luau.globals.newproxy",
-      "updated": 1639701713463,
+      "updated": 1639707436350,
       "created": 1639679934250,
       "parent": "DGU9GgAaWP4b1d29cAw6U",
       "children": [],
       "data": {},
-      "contentHash": "1e4d8bdd397100406889aebf810c3071",
+      "contentHash": "82212f72ec438ebbeaa352a8eab0f322",
       "custom": {}
     },
     "HUNAhx54cdmIl25040IiG": {
@@ -3889,12 +4244,12 @@
         }
       },
       "fname": "lang.luau.globals.ipairs",
-      "updated": 1639706529144,
+      "updated": 1639707566330,
       "created": 1639706381423,
       "parent": "DGU9GgAaWP4b1d29cAw6U",
       "children": [],
       "data": {},
-      "contentHash": "c93ec52afa95516f4cdd96fa6b3fe913",
+      "contentHash": "16dac443f67a94c7ca18224e36189b82",
       "custom": {}
     },
     "Rwfw461a1jbNa3fP8vXgA": {
@@ -3919,12 +4274,12 @@
             "start": {
               "line": 4,
               "column": 13,
-              "offset": 79
+              "offset": 76
             },
             "end": {
               "line": 4,
               "column": 36,
-              "offset": 102
+              "offset": 99
             },
             "indent": []
           },
@@ -3947,12 +4302,12 @@
             "start": {
               "line": 4,
               "column": 113,
-              "offset": 179
+              "offset": 176
             },
             "end": {
               "line": 4,
               "column": 136,
-              "offset": 202
+              "offset": 199
             },
             "indent": []
           },
@@ -3975,12 +4330,12 @@
             "start": {
               "line": 4,
               "column": 146,
-              "offset": 212
+              "offset": 209
             },
             "end": {
               "line": 4,
               "column": 181,
-              "offset": 247
+              "offset": 244
             },
             "indent": []
           },
@@ -4044,12 +4399,12 @@
         }
       },
       "fname": "lang.luau.globals.getmetatable",
-      "updated": 1639706466119,
+      "updated": 1640112382114,
       "created": 1639706181295,
       "parent": "DGU9GgAaWP4b1d29cAw6U",
       "children": [],
       "data": {},
-      "contentHash": "e3d8409a9025731d95c67e4d4fef9c47",
+      "contentHash": "c47f9bc6fafc178b8d2463bdc4fbeee5",
       "custom": {}
     },
     "qRu2pgZ7Wd1m1jXmGKwTx": {

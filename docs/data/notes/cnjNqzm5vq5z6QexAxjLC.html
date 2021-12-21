@@ -1,0 +1,9 @@
+<h1 id="tostring"><a aria-hidden="true" class="anchor-heading" href="#tostring"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>tostring</h1>
+<pre class="language-lua"><code class="language-Lua"><span class="token function">tostring</span><span class="token punctuation">(</span>v<span class="token punctuation">:</span> unknown<span class="token punctuation">)</span><span class="token punctuation">:</span> string
+</code></pre>
+<p>Receives an argument of any type and converts it to a string in a reasonable format. For complete control of how numbers are converted, use string.format. If the metatable of e has a __tostring metamethod, then it will be called with e as the only argument and will return the result.</p>
+<h2 id="examples"><a aria-hidden="true" class="anchor-heading" href="#examples"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Examples</h2>
+<pre class="language-lua"><code class="language-Lua"><span class="token keyword">local</span> isRobloxCool <span class="token operator">=</span> <span class="token keyword">true</span>
+<span class="token comment">-- Convert the boolean to a string then concatenate:</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Roblox is cool: "</span> <span class="token operator">..</span> <span class="token function">tostring</span><span class="token punctuation">(</span>isRobloxCool<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">--> Roblox is cool: true</span>
+</code></pre>

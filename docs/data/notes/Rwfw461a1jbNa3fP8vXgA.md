@@ -1,5 +1,5 @@
 ```Lua
-getmetatable(t: table | string | userdata): table | nil
+getmetatable<T: table | string | userdata>(t: T): T?
 ```
 Returns the [[lang.luau.metatable]] of the given table t if it has one, otherwise returns nil. If t does have a [[lang.luau.metatable]], and the [[lang.luau.metatable.__metatable]] metamethod is set, it returns that value instead.
 ## Examples

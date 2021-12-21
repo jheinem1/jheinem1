@@ -6,6 +6,6 @@ Returns three values: an iterator function, the table t and the number 0. Each t
 ```Lua
 local fruits = {"apples", "orangs", "kiwi"}
 for index, fruit in ipairs(fruits) do
-    print(index, fruit) --> 1 applies, 2 oranges, 3 kiwi, etc...
+    print(index, fruit) --> 1 apples, 2 oranges, 3 kiwi
 end
 ```

@@ -1,8 +1,8 @@
 ---
 id: FRTyFQ5iHxeh3RGTfAjti
-title: Select
+title: select
 desc: 'Returns all arguments after '
-updated: 1640112049586
+updated: 1640115907360
 created: 1640111652536
 ---
 ```Lua

@@ -1,8 +1,8 @@
 ---
 id: UJbkI3uFmVsctY0mOBIIl
-title: Type
-desc: ''
-updated: 1640112711159
+title: type
+desc: 'Returns the type of the provided value.'
+updated: 1640115932131
 created: 1640112619319
 ---
 ```Lua

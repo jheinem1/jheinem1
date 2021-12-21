@@ -1,8 +1,8 @@
 ---
 id: KQITPOsV6K0sg154kw8B7
-title: Print
+title: print
 desc: 'Prints any number of values to the console, formatting non-string values.'
-updated: 1640111420970
+updated: 1640115897776
 created: 1640111355176
 ---
 ```Lua

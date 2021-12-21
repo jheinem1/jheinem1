@@ -11,8 +11,8 @@
       "links": [],
       "anchors": {},
       "fname": "403",
-      "updated": 1640115842223,
-      "created": 1640115842223,
+      "updated": 1640115958509,
+      "created": 1640115958509,
       "parent": null,
       "children": [],
       "data": {}
@@ -3697,21 +3697,21 @@
     },
     "UJbkI3uFmVsctY0mOBIIl": {
       "id": "UJbkI3uFmVsctY0mOBIIl",
-      "title": "Type",
+      "title": "type",
       "vault": {
         "fsPath": "vault"
       },
       "type": "note",
-      "desc": "",
+      "desc": "Returns the type of the provided value.",
       "links": [],
       "anchors": {},
       "fname": "lang.luau.globals.type",
-      "updated": 1640112711159,
+      "updated": 1640115932131,
       "created": 1640112619319,
       "parent": "DGU9GgAaWP4b1d29cAw6U",
       "children": [],
       "data": {},
-      "contentHash": "ad75e1e73d9f72fbf38d6db9eed534a0",
+      "contentHash": "47f36196d5d1c204e2eed1ff14e36ed6",
       "custom": {}
     },
     "cnjNqzm5vq5z6QexAxjLC": {
@@ -3862,7 +3862,7 @@
     },
     "FRTyFQ5iHxeh3RGTfAjti": {
       "id": "FRTyFQ5iHxeh3RGTfAjti",
-      "title": "Select",
+      "title": "select",
       "vault": {
         "fsPath": "vault"
       },
@@ -3896,12 +3896,12 @@
         }
       },
       "fname": "lang.luau.globals.select",
-      "updated": 1640112049586,
+      "updated": 1640115907360,
       "created": 1640111652536,
       "parent": "DGU9GgAaWP4b1d29cAw6U",
       "children": [],
       "data": {},
-      "contentHash": "a20954fcb0f61ffb28c5ee6a8a3c060b",
+      "contentHash": "4f3973f7a36b385820f35300b869b213",
       "custom": {}
     },
     "Pnts1qxX2kpKgf0RLBqBG": {
@@ -3963,7 +3963,7 @@
     },
     "KQITPOsV6K0sg154kw8B7": {
       "id": "KQITPOsV6K0sg154kw8B7",
-      "title": "Print",
+      "title": "print",
       "vault": {
         "fsPath": "vault"
       },
@@ -3972,12 +3972,12 @@
       "links": [],
       "anchors": {},
       "fname": "lang.luau.globals.print",
-      "updated": 1640111420970,
+      "updated": 1640115897776,
       "created": 1640111355176,
       "parent": "DGU9GgAaWP4b1d29cAw6U",
       "children": [],
       "data": {},
-      "contentHash": "aead2e4fccc88512e13414537424fac6",
+      "contentHash": "3daa53a8eed8997ff81cf93fc7680e9f",
       "custom": {}
     },
     "ArHImH45bIYP655dxbQRu": {

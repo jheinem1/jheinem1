@@ -11,6 +11,7 @@ I've worked with a variety of languages, including
 - Rust
 - Kotlin
 - Python
+
 , but I have to say that TypeScript is probably my favorite right now.
 # Projects
 Here's some neat projects I've created for other people to use!

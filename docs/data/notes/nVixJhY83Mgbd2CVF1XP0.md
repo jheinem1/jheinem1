@@ -1,1 +1,0 @@
-A shared table that exists across the Luau environment.

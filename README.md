@@ -1,18 +1,6 @@
 # About Me
 Hi, I'm a software engineering major @ ASU!
 I dabble in a lot of different technologies, but I really enjoy learning new and exciting languages, libraries, and frameworks.
-## Languages
-I've worked with a variety of languages, including
-- TypeScript
-- JavaScript
-- Java
-- C
-- C++
-- Rust
-- Kotlin
-- Python
-
-, but I have to say that TypeScript is probably my favorite right now.
 # Projects
 Here's some neat projects I've created for other people to use!
 ## [@rbxts/region](https://github.com/jheinem1/region)

@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# About Me
+Hi, I'm a software engineering major @ ASU!
+I dabble in a lot of different technologies, but I really enjoy learning new and exciting languages, libraries, and frameworks.
+# Projects
+Here's some neat projects I've created for other people to use!
+## [@rbxts/region](https://github.com/jheinem1/region)
+A promise-based [roblox-ts](https://github.com/roblox-ts/roblox-ts) API that detects when parts enter defined regions. Provides the ability to union and negate different primitive shapes together to create complex regions.
+[Demo Video](https://youtu.be/rmOMUbAeya0)
+You can see an example of usage in a playground [here](https://roblox-ts.com/playground/#code/JYWwDg9gTgLgBAbzgBQDYEMCeBTKBnOAXzgDMoIQ4AiAASgCMAPGPAej1wDdgBjbPKgG4AUKEixEcAELoOydLABK2AObAIAOwA0cZWs0A5Vehjrtu1WYCqGs0VLlKtBszZRLmocOE9NeeCCYAMoAjgCuCtjyEgC8cBrYAO5wAJIa-ugafAAUVNEwVACUIoGhEe75AHRBwABe2HBxCckAatg8MNAAzNkAjF06AKw6AEzFwqXhkVXIEHjAppqN8UlwbR3d2QAMOjtwW+OT5VEKMNUAFuhgDXEAohphIJX5ACqY15VSqBA8ANYiPj8AUwAGFMKhgBoACa4fLLZqpdIwTI5PKnIolUHgyEwqBVGr1eGrdadKA9fo6Xp7MaYsEQ6Gw07POYLOxNYntUk9PY88aApFwUpgc64E6xFbJNIZLLYXL5DETYLC0X4uo3CVrTmbClwYZwGmKoLKipM2bzRYaImtLVk7a7XaHJUik2wC5XdX3R7PU5vD4yVCoWnYhl4plBS7XZaep6vd7YSp0nG4AG+AV4KbuPRs6SyMUwLOaSpkCj5bJHaancap-xwHjB3EFy1xGRyU6NouOUuBRMh-JVoFwPDG7CN5YtvPt4sgLtOlWVlMDsK2Jbs5KNmxmbIAbXTx0bOjr9IbHg0AF1+wKEioTNmEY2jNeLdkl2YdEPnSOT3zq-BNAAZbASHzE9lmyMAMBwKAAC4UAg3BCkaAA+RBhDgNC4DAKBIRgbIAAMABIEHArBcEqAx0BAbBiFQQD4BgEU4HcfQNAAQlw8Z0NrAdyAgGA4TiYjIITS4oHQDpcAAfmeLCQAUTB8hETjgBIOBsh4vjKxWR8zEqbANBgUUoUbNSIF4vtKnovTsmyBCYmQzR7gM9wjJPMC4KgQpxkIEQfzgBz9MM0c4jckjoNg0LbOQhBUPQzDsLwwjBNI8jKOIPSnOwKE4EsxiTzYjj0N89T+Iw9zhIUMSnKk5AZLkhSYrQ5TVOKzSrxvQsaKA4yWtgQoLJFDRrMivyNAArrXKSjyvIBNBQrwZ53IAQShGEoQTTQEg6azJsihrStC8rRPEqBltW9aNE2nDsh4ETKvgpC9s4m6KuO6TQDq05Hs49CJK09qNF0gLnOM56jqct7ZKgeTK36qybKQkbHMCib3M8r7vrgGClxhEhIUyrQ9sKAnxiAA).
+## [@rbxts/markdown-ast](https://github.com/jheinem1/markdown-ast)
+A library that converts Markdown text into a traversible abstract syntax tree without using string patterns or RegEx. Supports most markdown syntax and some optional syntax with the exception of XML.
+```ts
+const markdown = `
+# Big Heading
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Item 1
+- Item 2
+- Item 3
 
-Currently, two official plugins are available:
+1. Item 1
+2. Item 2
+3. Item 3
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**bold text**
+`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+parse(markdown); // Markdown AST
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## [@rbxts/better-binding](https://github.com/jheinem1/better-binding)
+An extension of Roact's bindings (equivalent to React's hooks) that allows for a more object-oriented approach to state management.
+## [Lua-Serializer](https://github.com/jheinem1/Lua-Serializer)
+This is a Lua API that converts values back into Lua syntax for debugging and data visualization. I occasionally push updates to improve efficiency and accuracy.
+## Other
+I open sourced a few of the previous projects I worked on (though most people wouldn't find them particularly useful) such as [Mojave](https://github.com/jheinem1/Mojave), [Shady_Sands](https://github.com/jheinem1/Shady_Sands).

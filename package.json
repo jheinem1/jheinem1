@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jheinem1.github.io/",
+  "homepage": "https://jheinem1.github.io/jheinem1",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

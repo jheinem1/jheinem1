@@ -6,14 +6,13 @@ function AcademicProjects() {
   return (
     <AnimatedContainer>
       <h1>Notable Academic Projects</h1>
-      <div>
-        <h2>Capstone Project</h2>
+      <ExpandableTextBlock title="Capstone Project">
         <p>
           Developed an iOS app for a client using React Native, Redux, and
           TypeScript. Collaborated with a team of 5 and implemented Agile
           practices to ensure timely delivery and organized project management.
         </p>
-      </div>
+      </ExpandableTextBlock>
       <ExpandableTextBlock title="Workout Wizard">
         <p>
           I and a group of classmates converted a Java application called

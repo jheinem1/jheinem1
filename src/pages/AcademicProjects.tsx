@@ -1,6 +1,8 @@
 import AnimatedContainer from "../components/AnimatedContainer";
 import ExpandableTextBlock from "../components/ExpandableTextBlock";
 import NavButton from "../components/NavButton";
+import workoutWizard0 from "../assets/workout-wizard-0.png";
+import workoutWizard1 from "../assets/workout-wizard-1.png";
 
 function AcademicProjects() {
   return (
@@ -21,12 +23,12 @@ function AcademicProjects() {
         </p>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <img
-            src="/assets/workout-wizard-0.png"
+            src={workoutWizard0}
             alt="Workout Wizard 0"
             style={{ width: "200px", marginRight: "10px" }}
           />
           <img
-            src="/assets/workout-wizard-1.png"
+            src={workoutWizard1}
             alt="Workout Wizard 1"
             style={{ width: "200px" }}
           />

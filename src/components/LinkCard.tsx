@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function LinkCard({
   icon,
   label,
   link,
   displayLink,
+  children,
 }: {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   label: string;
   link: string;
   displayLink: string;
+  children?: React.ReactNode;
 }) {
   const [hovered, setHovered] = useState(false);
   return (
@@ -25,14 +28,21 @@ export default function LinkCard({
         transform: hovered ? "scale(1.03)" : "scale(1)",
         transition: "transform 0.3s ease",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         cursor: "pointer",
-        flexDirection: "column",
-        position: "relative",
       }}
     >
-      <span style={{ marginRight: "0.5rem", color: "#fff" }}>{icon}</span>
-      <span style={{ color: "#fff" }}>{label}</span>
+      <span
+        style={{ marginBottom: "0.5rem", color: "#fff", fontWeight: "bold" }}
+      >
+        {icon || <FaGithub />} {label}
+      </span>
+      {children && (
+        <div style={{ color: "#fff", fontSize: "0.9rem", textAlign: "center" }}>
+          {children}
+        </div>
+      )}
       <div
         style={{
           maxHeight: hovered ? "20px" : "0px",

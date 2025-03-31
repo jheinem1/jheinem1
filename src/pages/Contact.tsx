@@ -12,7 +12,6 @@ function Contact() {
           transition: "all 0.3s ease",
           display: "flex",
           flexDirection: "column",
-          gap: "1rem",
         }}
       >
         <LinkCard
@@ -31,7 +30,6 @@ function Contact() {
       <div
         style={{
           transition: "all 0.3s ease",
-          marginTop: "1rem",
         }}
       >
         <NavButton navigateTo="/">Back Home</NavButton>

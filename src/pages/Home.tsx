@@ -10,7 +10,7 @@ function Home() {
           display: "flex",
           justifyContent: "space-around",
           flexWrap: "wrap",
-          gap: "1rem",
+          flexDirection: "column",
         }}
       >
         <NavButton navigateTo="/about-me">About Me</NavButton>

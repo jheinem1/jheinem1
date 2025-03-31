@@ -13,6 +13,10 @@ function AcademicProjects() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          width: "100%",
+          maxWidth: "800px",
+          padding: "0 1rem",
+          boxSizing: "border-box",
         }}
       >
         <ExpandableTextBlock title="Capstone Project">
@@ -29,16 +33,23 @@ function AcademicProjects() {
             Memorando into a gym class management system using SCRUM, Java,
             Swing, and Gradle.
           </p>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: "10px",
+            }}
+          >
             <img
               src={workoutWizard0}
               alt="Workout Wizard 0"
-              style={{ width: "200px", marginRight: "10px" }}
+              style={{ width: "100%", maxWidth: "200px" }}
             />
             <img
               src={workoutWizard1}
               alt="Workout Wizard 1"
-              style={{ width: "200px" }}
+              style={{ width: "100%", maxWidth: "200px" }}
             />
           </div>
         </ExpandableTextBlock>
@@ -49,15 +60,18 @@ function AcademicProjects() {
             I worked closely with the hardware team to ensure the robot
             performed its tasks.
           </p>
-          <iframe
-            width="500"
-            height="300"
-            src="https://www.youtube.com/embed/Fh_lxe03C6k?start=9606"
-            title="Sanghi Foundation AZ State 2019 FIRST ROBOTICS COMPETITION"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+          <div style={{ width: "100%", overflow: "hidden" }}>
+            <iframe
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/Fh_lxe03C6k?start=9606"
+              title="Sanghi Foundation AZ State 2019 FIRST ROBOTICS COMPETITION"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{ maxWidth: "100%" }}
+            ></iframe>
+          </div>
         </ExpandableTextBlock>
       </div>
       <NavButton navigateTo="/">Back Home</NavButton>

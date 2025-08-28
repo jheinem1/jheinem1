@@ -1,5 +1,4 @@
 # About Me
-Hi, I'm a software engineering major @ ASU!
 I dabble in a lot of different technologies, but I really enjoy learning new and exciting languages, libraries, and frameworks.
 # Projects
 Here's some neat projects I've created for other people to use!

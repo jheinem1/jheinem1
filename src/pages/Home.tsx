@@ -19,7 +19,7 @@ function Home() {
             <h3>{project.title}</h3>
             <p>{project.tagline}</p>
             <Link to={`/personal-projects/${project.id}`} className="text-link">
-              Open case study
+              Open project
             </Link>
           </article>
         ))}

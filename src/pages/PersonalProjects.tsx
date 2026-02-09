@@ -6,10 +6,6 @@ function PersonalProjects() {
     <section className="panel">
       <p className="eyebrow">Personal Projects</p>
       <h2>Project index</h2>
-      <p className="lede">
-        Open any project for deeper implementation notes, technical decisions,
-        and outcomes.
-      </p>
 
       <div className="projects-list">
         {personalProjects.map((project) => (

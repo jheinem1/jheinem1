@@ -15,7 +15,8 @@ html,
 body,
 #root {
   margin: 0;
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 body {
@@ -23,6 +24,8 @@ body {
     radial-gradient(circle at 20% -5%, color-mix(in srgb, var(--accent-color) 24%, transparent), transparent 35%),
     radial-gradient(circle at 90% 110%, color-mix(in srgb, var(--accent-color) 22%, transparent), transparent 30%),
     var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-color);
   transition: background-color 0.35s ease, color 0.35s ease;
 }

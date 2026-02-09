@@ -7,11 +7,7 @@ function Home() {
   return (
     <section className="panel hero-panel">
       <p className="eyebrow">Software Engineer Portfolio</p>
-      <h2>Building developer tools, interfaces, and maintainable systems.</h2>
-      <p className="lede">
-        A notebook-style portfolio focused on clear implementation details and
-        practical project outcomes.
-      </p>
+      <h2>Notable personal projects</h2>
       <div className="featured-grid">
         {featured.map((project) => (
           <article key={project.id} className="project-tile">

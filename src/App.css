@@ -25,6 +25,42 @@
   margin: 0 auto;
   padding: 4.5rem 0 4rem;
   position: relative;
+  isolation: isolate;
+}
+
+.lava-lamp-background {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle-life-canvas,
+.particle-life-vignette,
+.particle-life-grain {
+  position: absolute;
+  inset: 0;
+}
+
+.particle-life-canvas {
+  opacity: 0.98;
+}
+
+.particle-life-vignette {
+  background:
+    radial-gradient(circle at center, rgba(23, 33, 38, 0.08) 0 24%, transparent 58%),
+    radial-gradient(circle at center, transparent 0 48%, rgba(8, 10, 12, 0.28) 78%, rgba(6, 8, 10, 0.6) 100%),
+    linear-gradient(180deg, rgba(7, 8, 10, 0.34), rgba(7, 8, 10, 0.14) 24%, rgba(7, 8, 10, 0.4));
+}
+
+.particle-life-grain {
+  opacity: 0.34;
+  mix-blend-mode: soft-light;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.9px),
+    linear-gradient(rgba(10, 10, 12, 0.14), rgba(10, 10, 12, 0.14));
+  background-size: 10px 10px, auto;
 }
 
 .site-header {
@@ -573,5 +609,11 @@ body {
     right: 0.9rem;
     bottom: 0.9rem;
     padding: 0.65rem 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle-life-canvas {
+    opacity: 0.72;
   }
 }

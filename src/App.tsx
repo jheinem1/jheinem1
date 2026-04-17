@@ -20,6 +20,7 @@ import FunnyBirthdateSelector, {
   formatBirthdate,
   type BirthdateValue,
 } from "./components/FunnyBirthdateSelector";
+import LavaLampBackground from "./components/LavaLampBackground";
 
 const BIRTHDATE_STORAGE_KEY = "selected-birthdate";
 
@@ -87,6 +88,7 @@ function AppFrame() {
 
   return (
     <div className="app-root">
+      <LavaLampBackground />
       <header className="site-header">
         <div>
           <p className="kicker">James Heinemann</p>

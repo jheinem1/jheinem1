@@ -562,12 +562,20 @@ li {
   padding: 1.25rem;
   background: rgba(0, 0, 0, 0.52);
   backdrop-filter: blur(8px);
+  overflow-y: auto;
 }
 
 .birthdate-modal {
   width: min(100%, 36rem);
   display: grid;
   gap: 1rem;
+  max-height: calc(100dvh - 2.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.birthdate-modal::before {
+  inset: 0;
 }
 
 .birthdate-modal-header {
@@ -635,12 +643,26 @@ body {
     flex-direction: column;
   }
 
+  .birthdate-modal-backdrop {
+    padding: 0.9rem;
+  }
+
+  .birthdate-modal {
+    gap: 0.85rem;
+    max-height: calc(100dvh - 1.8rem);
+  }
+
   .birthdate-row {
     grid-template-columns: 1fr;
   }
 
   .birthdate-label {
     padding-top: 0;
+  }
+
+  .birthdate-month-part {
+    min-height: 2.7rem;
+    padding: 0.65rem 0.75rem;
   }
 
   .birthdate-year-wrap {
@@ -651,6 +673,36 @@ body {
     right: 0.9rem;
     bottom: 0.9rem;
     padding: 0.65rem 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthdate-modal-backdrop {
+    place-items: start center;
+    padding:
+      max(0.7rem, env(safe-area-inset-top))
+      0.7rem
+      max(0.7rem, env(safe-area-inset-bottom));
+  }
+
+  .birthdate-modal {
+    gap: 0.75rem;
+    max-height: calc(100dvh - 1.4rem);
+  }
+
+  .birthdate-month-part {
+    min-height: 2.45rem;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.94rem;
+  }
+
+  .birthdate-spinner {
+    width: 100%;
+  }
+
+  .birthdate-spinner-input,
+  .birthdate-year-display {
+    font-size: clamp(1.15rem, 5.5vw, 1.5rem);
   }
 }
 

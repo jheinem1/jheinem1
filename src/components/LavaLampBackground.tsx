@@ -93,6 +93,29 @@ function createParticles(width: number, height: number) {
   return particles;
 }
 
+function repositionParticles(
+  particles: Particle[],
+  previousWidth: number,
+  previousHeight: number,
+  nextWidth: number,
+  nextHeight: number,
+) {
+  if (previousWidth <= 0 || previousHeight <= 0) {
+    return createParticles(nextWidth, nextHeight);
+  }
+
+  const widthRatio = nextWidth / previousWidth;
+  const heightRatio = nextHeight / previousHeight;
+
+  return particles.map((particle) => ({
+    ...particle,
+    x: Math.min(nextWidth, Math.max(0, particle.x * widthRatio)),
+    y: Math.min(nextHeight, Math.max(0, particle.y * heightRatio)),
+    vx: particle.vx * widthRatio,
+    vy: particle.vy * heightRatio,
+  }));
+}
+
 function LavaLampBackground() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -118,6 +141,8 @@ function LavaLampBackground() {
     let clusters: Cluster[] = [];
 
     const resize = () => {
+      const previousWidth = width;
+      const previousHeight = height;
       width = window.innerWidth;
       height = window.innerHeight;
       const ratio = Math.min(window.devicePixelRatio || 1, MAX_DEVICE_PIXEL_RATIO);
@@ -126,7 +151,16 @@ function LavaLampBackground() {
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
-      particles = createParticles(width, height);
+      particles =
+        particles.length === 0
+          ? createParticles(width, height)
+          : repositionParticles(
+              particles,
+              previousWidth,
+              previousHeight,
+              width,
+              height,
+            );
     };
 
     const applyRules = () => {

@@ -64,6 +64,7 @@ const BROWNIAN_FORCE = 0.013;
 const CLUSTER_LINK_DISTANCE = 58;
 const CLUSTER_LINK_DISTANCE_SQUARED = CLUSTER_LINK_DISTANCE * CLUSTER_LINK_DISTANCE;
 const MIN_CLUSTER_SIZE = 4;
+const MAX_DEVICE_PIXEL_RATIO = 2;
 
 function createParticles(width: number, height: number) {
   const particles: Particle[] = [];
@@ -112,13 +113,14 @@ function LavaLampBackground() {
     let width = window.innerWidth;
     let height = window.innerHeight;
     let animationFrame = 0;
+    let isAnimating = false;
     let particles = createParticles(width, height);
     let clusters: Cluster[] = [];
 
     const resize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
-      const ratio = window.devicePixelRatio || 1;
+      const ratio = Math.min(window.devicePixelRatio || 1, MAX_DEVICE_PIXEL_RATIO);
       canvas.width = Math.floor(width * ratio);
       canvas.height = Math.floor(height * ratio);
       canvas.style.width = `${width}px`;
@@ -334,13 +336,13 @@ function LavaLampBackground() {
       context.restore();
     };
 
-    const drawParticle = (particle: Particle) => {
+    const drawParticle = (particle: Particle, now: number) => {
       const cell = CELL_TYPES[particle.type];
       const speed = Math.hypot(particle.vx, particle.vy);
       const stretchX = 1 + Math.min(speed * 0.34, 0.34);
       const stretchY = 1 - Math.min(speed * 0.14, 0.16);
       const angle = Math.atan2(particle.vy, particle.vx);
-      const pulse = 0.94 + Math.sin(performance.now() * 0.0012 + particle.seed * 10) * 0.08;
+      const pulse = 0.94 + Math.sin(now * 0.0012 + particle.seed * 10) * 0.08;
 
       context.save();
       context.translate(particle.x, particle.y);
@@ -403,7 +405,7 @@ function LavaLampBackground() {
       context.restore();
     };
 
-    const draw = () => {
+    const draw = (now: number) => {
       context.clearRect(0, 0, width, height);
 
       context.fillStyle = "rgba(10, 14, 18, 0.18)";
@@ -416,26 +418,49 @@ function LavaLampBackground() {
       }
 
       for (const particle of particles) {
-        drawParticle(particle);
+        drawParticle(particle, now);
       }
     };
 
-    const tick = () => {
+    const tick = (now: number) => {
       if (!mediaQuery.matches) {
         applyRules();
       }
 
-      draw();
-      animationFrame = window.requestAnimationFrame(tick);
+      draw(now);
+
+      if (!mediaQuery.matches) {
+        animationFrame = window.requestAnimationFrame(tick);
+      } else {
+        isAnimating = false;
+      }
+    };
+
+    const syncMotionPreference = () => {
+      if (mediaQuery.matches) {
+        if (isAnimating) {
+          window.cancelAnimationFrame(animationFrame);
+          isAnimating = false;
+        }
+        draw(performance.now());
+        return;
+      }
+
+      if (!isAnimating) {
+        isAnimating = true;
+        animationFrame = window.requestAnimationFrame(tick);
+      }
     };
 
     resize();
-    tick();
+    syncMotionPreference();
 
     window.addEventListener("resize", resize);
+    mediaQuery.addEventListener("change", syncMotionPreference);
 
     return () => {
       window.removeEventListener("resize", resize);
+      mediaQuery.removeEventListener("change", syncMotionPreference);
       window.cancelAnimationFrame(animationFrame);
     };
   }, []);

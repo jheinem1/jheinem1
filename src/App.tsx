@@ -143,7 +143,7 @@ function AppFrame() {
               aria-labelledby="birthdate-modal-title"
             >
               <div className="birthdate-modal-header">
-                <h2 id="birthdate-modal-title">Select your Birth Day</h2>
+                <h2 id="birthdate-modal-title">Select a Birth Day</h2>
               </div>
               <FunnyBirthdateSelector
                 value={birthdate}

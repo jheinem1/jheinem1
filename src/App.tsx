@@ -15,14 +15,50 @@ import Contact from "./pages/Contact";
 import PersonalProjects from "./pages/PersonalProjects";
 import PersonalProjectDetail from "./pages/PersonalProjectDetail";
 import { navLinks } from "./content";
-import FunnyBirthdateSelector, {
+import FunnyBirthdateSelector from "./components/FunnyBirthdateSelector";
+import {
   DEFAULT_BIRTHDATE,
   formatBirthdate,
   type BirthdateValue,
-} from "./components/FunnyBirthdateSelector";
+} from "./components/birthdateUtils";
 import LavaLampBackground from "./components/LavaLampBackground";
 
 const BIRTHDATE_STORAGE_KEY = "selected-birthdate";
+
+type BirthdateState = {
+  birthdate: BirthdateValue;
+  isBirthdateModalOpen: boolean;
+};
+
+function getInitialBirthdateState(): BirthdateState {
+  const storedBirthdate = window.localStorage.getItem(BIRTHDATE_STORAGE_KEY);
+
+  if (!storedBirthdate) {
+    return {
+      birthdate: DEFAULT_BIRTHDATE,
+      isBirthdateModalOpen: true,
+    };
+  }
+
+  try {
+    const parsedBirthdate = JSON.parse(storedBirthdate) as Partial<BirthdateValue>;
+
+    return {
+      birthdate: {
+        day: parsedBirthdate.day ?? DEFAULT_BIRTHDATE.day,
+        year: parsedBirthdate.year ?? DEFAULT_BIRTHDATE.year,
+        selectedParts:
+          parsedBirthdate.selectedParts ?? DEFAULT_BIRTHDATE.selectedParts,
+      },
+      isBirthdateModalOpen: false,
+    };
+  } catch {
+    return {
+      birthdate: DEFAULT_BIRTHDATE,
+      isBirthdateModalOpen: true,
+    };
+  }
+}
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -54,32 +90,12 @@ function AnimatedRoutes() {
 }
 
 function AppFrame() {
-  const [birthdate, setBirthdate] = useState<BirthdateValue>(DEFAULT_BIRTHDATE);
-  const [isBirthdateModalOpen, setIsBirthdateModalOpen] = useState(false);
+  const [birthdateState, setBirthdateState] =
+    useState<BirthdateState>(getInitialBirthdateState);
+  const { birthdate, isBirthdateModalOpen } = birthdateState;
 
   useEffect(() => {
     document.documentElement.setAttribute("data-design", "notebook");
-  }, []);
-
-  useEffect(() => {
-    const storedBirthdate = window.localStorage.getItem(BIRTHDATE_STORAGE_KEY);
-
-    if (!storedBirthdate) {
-      setIsBirthdateModalOpen(true);
-      return;
-    }
-
-    try {
-      const parsedBirthdate = JSON.parse(storedBirthdate) as BirthdateValue;
-      setBirthdate({
-        day: parsedBirthdate.day ?? DEFAULT_BIRTHDATE.day,
-        year: parsedBirthdate.year ?? DEFAULT_BIRTHDATE.year,
-        selectedParts:
-          parsedBirthdate.selectedParts ?? DEFAULT_BIRTHDATE.selectedParts,
-      });
-    } catch {
-      setIsBirthdateModalOpen(true);
-    }
   }, []);
 
   useEffect(() => {
@@ -131,12 +147,22 @@ function AppFrame() {
               </div>
               <FunnyBirthdateSelector
                 value={birthdate}
-                onChange={setBirthdate}
+                onChange={(nextBirthdate) => {
+                  setBirthdateState((currentState) => ({
+                    ...currentState,
+                    birthdate: nextBirthdate,
+                  }));
+                }}
               />
               <button
                 type="button"
                 className="birthdate-continue-button"
-                onClick={() => setIsBirthdateModalOpen(false)}
+                onClick={() => {
+                  setBirthdateState((currentState) => ({
+                    ...currentState,
+                    isBirthdateModalOpen: false,
+                  }));
+                }}
               >
                 Continue
               </button>
@@ -147,7 +173,12 @@ function AppFrame() {
       <button
         type="button"
         className="birthdate-chip-trigger"
-        onClick={() => setIsBirthdateModalOpen(true)}
+        onClick={() => {
+          setBirthdateState((currentState) => ({
+            ...currentState,
+            isBirthdateModalOpen: true,
+          }));
+        }}
       >
         {formatBirthdate(birthdate)}
       </button>

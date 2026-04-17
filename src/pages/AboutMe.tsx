@@ -5,13 +5,10 @@ function AboutMe() {
       <h2>James Heinemann</h2>
       <div className="about-copy">
         <p>
-          I am a software engineering graduate from ASU who likes building with
-          TypeScript, Java, Python, and C. Most of my project work focuses on
-          practical APIs and maintainable implementation details.
-        </p>
-        <p>
-          I enjoy turning vague ideas into solid interfaces and systems that
-          teams can evolve over time.
+          Hi, I'm James, a SWE graduate from ASU who likes building fun and
+          meaningful things! Most of my project work focuses on APIs and
+          maintainable software development, and I'm very interested in
+          software architecture.
         </p>
       </div>
     </section>

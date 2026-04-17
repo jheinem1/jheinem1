@@ -29,7 +29,7 @@ const today = new Date();
 const monthChoices = [null, ...Array(6).keys()]
 
 export const DEFAULT_BIRTHDATE: BirthdateValue = {
-  day: today.getDay(),
+  day: today.getDate(),
   year: today.getFullYear(),
   selectedParts: [
     monthChoices[Math.floor(Math.random() * monthChoices.length)],

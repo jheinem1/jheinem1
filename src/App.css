@@ -149,17 +149,6 @@ li {
   box-shadow: 0 12px 28px -18px var(--shadow-color);
 }
 
-.project-status {
-  margin: 0;
-  width: fit-content;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.2rem 0.45rem;
-  border-radius: 999px;
-  border: 1px dashed var(--border-color);
-}
-
 .projects-list {
   margin-top: 1.2rem;
   display: grid;

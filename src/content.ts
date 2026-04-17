@@ -15,7 +15,6 @@ export interface PersonalProject {
     body: string;
   }>;
   outcomes: string[];
-  status: "active" | "stable" | "archived";
 }
 
 export const personalProjects: PersonalProject[] = [
@@ -49,7 +48,6 @@ export const personalProjects: PersonalProject[] = [
       "Simpler game-side collision checks",
       "Improved maintainability for region-heavy features",
     ],
-    status: "active",
   },
   {
     id: "rbxts-markdown-ast",
@@ -81,7 +79,6 @@ export const personalProjects: PersonalProject[] = [
       "Cleaner plugin opportunities",
       "Safer handling of nested syntax",
     ],
-    status: "stable",
   },
   {
     id: "lua-serializer",
@@ -113,7 +110,6 @@ export const personalProjects: PersonalProject[] = [
       "Faster debugging cycles",
       "Consistent output across environments",
     ],
-    status: "stable",
   },
   {
     id: "rbxts-better-binding",
@@ -145,7 +141,6 @@ export const personalProjects: PersonalProject[] = [
       "Higher-level binding composition",
       "Clearer interfaces for shared modules",
     ],
-    status: "archived",
   },
 ];
 

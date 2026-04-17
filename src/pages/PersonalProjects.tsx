@@ -11,7 +11,6 @@ function PersonalProjects() {
         {personalProjects.map((project) => (
           <article key={project.id} className="project-row">
             <div>
-              <p className="project-status">{project.status}</p>
               <h3>{project.title}</h3>
               <p>{project.summary}</p>
               <div className="chip-row">

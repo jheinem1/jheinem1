@@ -6,7 +6,6 @@
   --panel-bg: rgba(22, 22, 24, 0.95);
   --panel-muted: #1d1d20;
   --button-bg: #f0f0f0;
-  --button-text: #171717;
   --hero-overlay: repeating-linear-gradient(
     -40deg,
     rgba(227, 227, 227, 0.06),
@@ -188,27 +187,64 @@ li {
   gap: 0.7rem;
 }
 
-.button-link,
 .text-link {
-  text-decoration: none;
   color: inherit;
-}
-
-.button-link {
-  background: var(--button-bg);
-  color: var(--button-text);
-  padding: 0.48rem 0.86rem;
-  border-radius: 0.75rem;
-  border: 1px solid transparent;
-}
-
-.button-link:hover {
-  border-color: var(--border-color);
-}
-
-.text-link {
   text-decoration: underline;
   text-underline-offset: 0.18rem;
+}
+
+.button-link,
+.project-link,
+.github-icon-link {
+  border: 1px dashed var(--border-color);
+  background: color-mix(in srgb, var(--panel-muted) 72%, transparent);
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button-link,
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: var(--radius-md);
+}
+
+.project-link::after {
+  content: "→";
+  opacity: 0.72;
+  transition: transform 0.2s ease;
+}
+
+.github-icon-link {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.github-icon-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.button-link:hover,
+.button-link:focus-visible,
+.project-link:hover,
+.project-link:focus-visible,
+.github-icon-link:hover,
+.github-icon-link:focus-visible {
+  background: color-mix(in srgb, var(--accent-color) 14%, var(--panel-bg));
+  transform: translateY(-1px);
+}
+
+.project-link:hover::after,
+.project-link:focus-visible::after {
+  transform: translateX(2px);
 }
 
 .chip-row {

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import GitHubIcon from "../components/GitHubIcon";
 import { personalProjects } from "../content";
 
 function PersonalProjects() {
@@ -21,16 +22,21 @@ function PersonalProjects() {
               </div>
             </div>
             <div className="project-actions">
-              <Link to={`/personal-projects/${project.id}`} className="button-link">
+              <Link
+                to={`/personal-projects/${project.id}`}
+                className="project-link"
+              >
                 View details
               </Link>
               <a
                 href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-link"
+                className="github-icon-link"
+                aria-label={`View ${project.title} on GitHub`}
+                title={`View ${project.title} on GitHub`}
               >
-                GitHub
+                <GitHubIcon />
               </a>
             </div>
           </article>

@@ -12,7 +12,7 @@ function Home() {
           <article key={project.id} className="project-tile">
             <h3>{project.title}</h3>
             <p>{project.tagline}</p>
-            <Link to={`/personal-projects/${project.id}`} className="text-link">
+            <Link to={`/personal-projects/${project.id}`} className="project-link">
               Open project
             </Link>
           </article>

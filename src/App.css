@@ -77,17 +77,6 @@
   font-size: 0.8rem;
 }
 
-.site-header h1 {
-  margin: 0.2rem 0;
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-}
-
-.header-concept {
-  margin: 0;
-  max-width: 70ch;
-  opacity: 0.85;
-}
-
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -286,20 +275,6 @@ li {
 .back-link {
   display: inline-block;
   margin-bottom: 0.7rem;
-}
-
-.about-layout {
-  display: grid;
-  grid-template-columns: minmax(180px, 260px) 1fr;
-  gap: 1.2rem;
-  align-items: center;
-}
-
-.portrait {
-  width: 100%;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 15px 30px -22px var(--shadow-color);
 }
 
 .about-copy p {
@@ -627,10 +602,6 @@ body {
 @media (max-width: 900px) {
   .app-root {
     width: min(960px, 94vw);
-  }
-
-  .about-layout {
-    grid-template-columns: 1fr;
   }
 
   .about-copy {

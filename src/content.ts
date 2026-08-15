@@ -7,8 +7,6 @@ export interface PersonalProject {
   stack: string[];
   links: {
     github: string;
-    live?: string;
-    docs?: string;
   };
   sections: Array<{
     heading: string;

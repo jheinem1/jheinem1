@@ -52,7 +52,7 @@ function getDaysInMonth(monthIndex: number, year: number) {
   return [3, 5, 8, 10].includes(monthIndex) ? 30 : 31;
 }
 
-export function formatMonth(parts: Array<number | null>) {
+function formatMonth(parts: Array<number | null>) {
   const joined = parts
     .map((partIndex, columnIndex) =>
       partIndex == null ? "" : BROKEN_MONTH_COLUMNS[columnIndex][partIndex] ?? "",

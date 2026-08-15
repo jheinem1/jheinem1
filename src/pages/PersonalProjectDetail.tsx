@@ -58,16 +58,6 @@ function PersonalProjectDetail() {
           </span>
           Open repository
         </a>
-        {project.links.docs ? (
-          <a
-            href={project.links.docs}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link"
-          >
-            Documentation
-          </a>
-        ) : null}
       </div>
     </section>
   );

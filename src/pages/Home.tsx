@@ -5,7 +5,7 @@ function Home() {
   const featured = personalProjects.slice(0, 3);
 
   return (
-    <section className="panel hero-panel">
+    <section className="panel">
       <p className="eyebrow">Software Engineer Portfolio</p>
       <h2>Notable personal projects</h2>
       <div className="featured-grid">

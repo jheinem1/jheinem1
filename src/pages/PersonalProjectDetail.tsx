@@ -14,7 +14,6 @@ function PersonalProjectDetail() {
       <Link to="/personal-projects" className="text-link back-link">
         Back to projects
       </Link>
-      <p className="eyebrow">{project.role}</p>
       <h2>{project.title}</h2>
       <p className="lede">{project.tagline}</p>
 

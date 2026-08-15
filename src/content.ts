@@ -3,7 +3,6 @@ export interface PersonalProject {
   title: string;
   tagline: string;
   summary: string;
-  role: string;
   stack: string[];
   links: {
     github: string;
@@ -22,7 +21,6 @@ export const personalProjects: PersonalProject[] = [
     tagline: "Fast geometric region detection for roblox-ts games",
     summary:
       "A performant API for detecting parts entering complex 2D and 3D regions in Roblox projects built with roblox-ts.",
-    role: "Library author and maintainer",
     stack: ["TypeScript", "roblox-ts", "Luau", "npm"],
     links: {
       github: "https://github.com/jheinem1/region",
@@ -53,7 +51,6 @@ export const personalProjects: PersonalProject[] = [
     tagline: "Markdown to AST parser without regex-heavy pipelines",
     summary:
       "Parses markdown into a traversable AST, enabling custom transformations and renderers.",
-    role: "Library author",
     stack: ["TypeScript", "Parser design", "AST", "npm"],
     links: {
       github: "https://github.com/jheinem1/markdown-ast",
@@ -84,7 +81,6 @@ export const personalProjects: PersonalProject[] = [
     tagline: "Serialize runtime values back into readable Lua source",
     summary:
       "A Lua API that converts values into Lua syntax for debugging, introspection, and visualization.",
-    role: "Maintainer",
     stack: ["Lua", "Serialization", "Debug tooling"],
     links: {
       github: "https://github.com/jheinem1/Lua-Serializer",
@@ -115,7 +111,6 @@ export const personalProjects: PersonalProject[] = [
     tagline: "Object-oriented state bindings for Roact ecosystems",
     summary:
       "Extends Roact-style bindings with patterns that feel more object-oriented and composable.",
-    role: "Library author",
     stack: ["TypeScript", "Roact", "State management"],
     links: {
       github: "https://github.com/jheinem1/better-binding",

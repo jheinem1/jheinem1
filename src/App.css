@@ -139,14 +139,6 @@ li {
   line-height: 1.58;
 }
 
-.eyebrow {
-  margin: 0;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.8;
-}
-
 .lede {
   max-width: 70ch;
 }

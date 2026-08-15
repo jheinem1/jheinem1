@@ -28,7 +28,6 @@ function ContactIcon({ label }: { label: string }) {
 function Contact() {
   return (
     <section className="panel">
-      <p className="eyebrow">Contact</p>
       <h2>Reach out</h2>
       <p className="lede">
         Open to collaboration and interesting technical work.

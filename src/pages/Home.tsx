@@ -6,7 +6,6 @@ function Home() {
 
   return (
     <section className="panel">
-      <p className="eyebrow">Software Engineer Portfolio</p>
       <h2>Notable personal projects</h2>
       <div className="featured-grid">
         {featured.map((project) => (

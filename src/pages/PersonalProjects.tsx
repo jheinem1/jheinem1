@@ -4,7 +4,6 @@ import { personalProjects } from "../content";
 function PersonalProjects() {
   return (
     <section className="panel">
-      <p className="eyebrow">Personal Projects</p>
       <h2>Project index</h2>
 
       <div className="projects-list">

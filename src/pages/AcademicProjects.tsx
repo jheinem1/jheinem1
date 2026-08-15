@@ -5,7 +5,6 @@ import { academicProjects } from "../content";
 function AcademicProjects() {
   return (
     <section className="panel">
-      <p className="eyebrow">Academic Work</p>
       <h2>Selected projects</h2>
 
       <div className="projects-list">

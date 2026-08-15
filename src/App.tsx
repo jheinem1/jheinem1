@@ -21,7 +21,7 @@ import {
   formatBirthdate,
   type BirthdateValue,
 } from "./components/birthdateUtils";
-import LavaLampBackground from "./components/LavaLampBackground";
+import ParticleLifeBackground from "./components/ParticleLifeBackground";
 
 const BIRTHDATE_STORAGE_KEY = "selected-birthdate";
 
@@ -104,7 +104,7 @@ function AppFrame() {
 
   return (
     <div className="app-root">
-      <LavaLampBackground />
+      <ParticleLifeBackground />
       <header className="site-header">
         <div>
           <p className="kicker">James Heinemann</p>

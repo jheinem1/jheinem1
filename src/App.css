@@ -27,7 +27,7 @@
   isolation: isolate;
 }
 
-.lava-lamp-background {
+.particle-life-background {
   position: fixed;
   inset: 0;
   z-index: -3;
@@ -36,25 +36,25 @@
 }
 
 .particle-life-canvas,
-.particle-life-vignette,
+.particle-life-veil,
 .particle-life-grain {
   position: absolute;
   inset: 0;
 }
 
 .particle-life-canvas {
-  opacity: 0.98;
+  opacity: 0.9;
 }
 
-.particle-life-vignette {
+.particle-life-veil {
   background:
-    radial-gradient(circle at center, rgba(23, 33, 38, 0.08) 0 24%, transparent 58%),
-    radial-gradient(circle at center, transparent 0 48%, rgba(8, 10, 12, 0.28) 78%, rgba(6, 8, 10, 0.6) 100%),
-    linear-gradient(180deg, rgba(7, 8, 10, 0.34), rgba(7, 8, 10, 0.14) 24%, rgba(7, 8, 10, 0.4));
+    radial-gradient(circle at center, rgba(12, 18, 20, 0.02) 0 28%, transparent 62%),
+    radial-gradient(circle at center, transparent 0 50%, rgba(7, 9, 11, 0.22) 80%, rgba(5, 7, 9, 0.54) 100%),
+    linear-gradient(180deg, rgba(7, 8, 10, 0.2), rgba(7, 8, 10, 0.04) 26%, rgba(7, 8, 10, 0.28));
 }
 
 .particle-life-grain {
-  opacity: 0.34;
+  opacity: 0.24;
   mix-blend-mode: soft-light;
   background:
     radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.9px),
@@ -707,6 +707,6 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .particle-life-canvas {
-    opacity: 0.72;
+    opacity: 0.74;
   }
 }
